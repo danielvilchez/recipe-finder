@@ -29,13 +29,15 @@
     <main>
         <!-- Search Section -->
         <section class="search-section">
-            <h2>Find Your Next Recipe</h2>
-            <p>Search recipes using ingredients or meals you want to prepare.</p>
-            <form id="searchForm">
-                <label for="searchInput" class="sr-only">Search recipe:</label>
-                <input type="search" id="searchInput" placeholder="Example: chicken, pasta, beef..." required>
-                <button type="submit" class="btn btn-primary">Search</button>
-            </form>
+            <div class="container">
+                <h2>Search Recipes</h2>
+                <form id="searchForm">
+                    <label for="searchInput" class="sr-only">Search recipe:</label>
+                    <input type="search" id="searchInput" placeholder="Example: chicken, pasta, beef..." required>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </section>
         </section>
 
         <!-- Recipe Results Section -->
@@ -48,7 +50,7 @@
 
         <!-- Food News Section -->
         <section class="news-section">
-            <h2>Food News</h2>
+            <h2>Related Food News</h2>
             <div id="newsList" class="news-list">
                 <!-- Sample Card (Will be replaced dynamically in Week 6) -->
                 <article class="news-card">
