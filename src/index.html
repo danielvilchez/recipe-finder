@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <meta name="description" content="Find recipes based on ingredients and discover food news.">
+    <!-- Google Fonts: Poppins & Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>🍳 Recipe Finder</h1>
+        </div>
+        <nav class="navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="favorites.html">Favorites</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Search Section -->
+        <section class="search-section">
+            <h2>Find Your Next Recipe</h2>
+            <p>Search recipes using ingredients or meals you want to prepare.</p>
+            <form id="searchForm">
+                <label for="searchInput" class="sr-only">Search recipe:</label>
+                <input type="search" id="searchInput" placeholder="Example: chicken, pasta, beef..." required>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </section>
+
+        <!-- Recipe Results Section -->
+        <section class="recipe-section">
+            <h2>Recipes</h2>
+            <div id="recipeList" class="recipe-list">
+                <p class="placeholder-text">Search for a recipe above to get started!</p>
+            </div>
+        </section>
+
+        <!-- Food News Section -->
+        <section class="news-section">
+            <h2>Food News</h2>
+            <div id="newsList" class="news-list">
+                <!-- Sample Card (Will be replaced dynamically in Week 6) -->
+                <article class="news-card">
+                    <h3>Food News Title</h3>
+                    <p>News description will appear here with relevant details about current food trends.</p>
+                    <button class="btn btn-secondary">Read More</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Recipe Finder | BYU WDD 330 Project</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

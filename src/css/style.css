@@ -1,0 +1,292 @@
+/* Import de tipografías desde la documentación */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap');
+
+/* =========================
+   General Styles
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    /* Tipografía principal */
+    background-color: #F9F9F9;
+    /* Fondo según la documentación */
+    color: #333333;
+    /* Texto según la documentación */
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    /* Tipografía para encabezados */
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 70px;
+    border-bottom: 2px solid #222;
+    background-color: #ffffff;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    /* Color primario verde */
+}
+
+.navigation {
+    display: flex;
+    gap: 40px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    color: #4CAF50;
+}
+
+
+/* =========================
+   Search Section
+========================= */
+
+.search-section {
+    background-color: #e0e0e0;
+    padding: 30px 70px;
+}
+
+.search-section h2 {
+    margin: 0 0 15px;
+    font-size: 2rem;
+}
+
+.search-section p {
+    display: none;
+}
+
+#searchForm {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#searchForm label {
+    display: none;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: 2px solid #222;
+    border-radius: 20px;
+    background-color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    padding: 8px 25px;
+    font-size: 1rem;
+    border: 2px solid #222;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    /* Color primario verde */
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #388E3C;
+}
+
+
+/* =========================
+   Sections Layout
+========================= */
+
+.recipe-section,
+.news-section {
+    padding: 25px 70px;
+}
+
+.recipe-section h2,
+.news-section h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid #222;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+
+/* Create two columns */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.search-section,
+.footer {
+    grid-column: 1 / 3;
+}
+
+
+/* =========================
+   Recipe Cards
+========================= */
+
+.recipe-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.recipe-card {
+    display: flex;
+    border: 2px solid #222;
+    height: 120px;
+    background-color: #ffffff;
+}
+
+
+.recipe-card img {
+    width: 160px;
+    object-fit: cover;
+    border-right: 2px solid #222;
+}
+
+
+.recipe-card h3,
+.recipe-card p {
+    margin: 5px 15px;
+}
+
+
+.recipe-card h3 {
+    font-size: 1.3rem;
+}
+
+
+/* =========================
+   News Cards
+========================= */
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #222;
+    padding: 15px;
+    min-height: 120px;
+    background-color: #ffffff;
+}
+
+
+.news-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+}
+
+
+.news-card p {
+    margin: 5px 0 15px;
+}
+
+/* Botón secundario para las noticias según el doc */
+.news-card button {
+    background-color: #FF9800;
+    /* Color secundario naranja */
+    align-self: flex-start;
+}
+
+.news-card button:hover {
+    background-color: #F57C00;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 2px solid #222;
+}
+
+
+/* =========================
+   Mobile Responsive
+========================= */
+
+@media screen and (max-width: 700px) {
+
+    .header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main {
+        display: block;
+    }
+
+    .search-section,
+    .recipe-section,
+    .news-section {
+        padding: 20px;
+    }
+
+    #searchForm {
+        flex-direction: column;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
+    .recipe-card {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .recipe-card img {
+        width: 100%;
+        height: 150px;
+    }
+
+}
