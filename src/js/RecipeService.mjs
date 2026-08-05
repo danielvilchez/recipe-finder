@@ -11,3 +11,15 @@ export async function searchRecipes(query) {
         return [];
     }
 }
+
+export async function getRecipeById(id) {
+    try {
+        const response = await fetch(`${BASE_URL}lookup.php?i=${id}`);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        return data.meals ? data.meals[0] : null;
+    } catch (error) {
+        console.error('Error fetching recipe details:', error);
+        return null;
+    }
+}
