@@ -5,12 +5,13 @@ Recipe Finder is a web application designed to help users discover delicious rec
 ## 🚀 Live Demo
 - **Live Site:** [https://danielvilchez.github.io/recipe-finder/src/index.html](https://danielvilchez.github.io/recipe-finder/src/index.html)
 - **Trello Board:** [https://trello.com/b/TOl68s6g/recipe-finder](https://trello.com/b/TOl68s6g/recipe-finder)
+- **Video Presentation:** [Watch the 5-Minute Project Demo](TU_ENLACE_DE_VIDEO_AQUÍ)
 
 ## 📌 Features
 - **Recipe Search:** Query meals using [TheMealDB API](https://www.themealdb.com/api.php).
 - **Recipe Details:** Step-by-step instructions, ingredients list, and YouTube video tutorials.
 - **Favorites System:** Save preferred recipes persistently using browser `localStorage`.
-- **Food News Integration:** Stay updated with culinary topics powered by [NewsAPI](https://newsapi.org/).
+- **Food News Integration:** Stay updated with culinary topics.
 - **Responsive & Accessible Design:** Optimized layout for mobile, tablet, and desktop screens with smooth CSS transitions.
 
 ## 🛠️ Technologies Used
