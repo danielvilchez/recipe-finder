@@ -1,24 +1,26 @@
-const API_KEY = '6f4c067504544f35a7f7c8d5a9f3ea4a';
-
-export async function fetchFoodNews(query = 'food') {
-    const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`;
+export async function fetchFoodNews() {
+    // API pública y libre de restricciones de dominio (CORS/426)
+    const url = 'https://www.themealdb.com/api/json/v1/1/categories.php';
 
     try {
         const response = await fetch(url);
 
         if (!response.ok) {
-            throw new Error(`NewsAPI error: ${response.status}`);
+            throw new Error(`API error: ${response.status}`);
         }
 
         const data = await response.json();
 
-        return (data.articles || []).slice(0, 3).map(article => ({
-            title: article.title,
-            description: article.description || 'Click read more to view full article details.',
-            url: article.url
+        // Mapea las categorías a un formato compatible con tus tarjetas de noticias
+        return (data.categories || []).slice(0, 3).map(category => ({
+            title: `Culinary Spotlight: ${category.strCategory}`,
+            description: category.strCategoryDescription
+                ? category.strCategoryDescription.slice(0, 120) + '...'
+                : 'Explore world-class recipes and culinary techniques in this featured category.',
+            url: `https://www.google.com/search?q=${encodeURIComponent(category.strCategory + ' recipes')}`
         }));
     } catch (error) {
-        console.warn('NewsAPI falló o fue bloqueado en producción. Activando contenido de respaldo:', error);
+        console.warn('Error fetching news/categories. Activating fallback:', error);
 
         return [
             {
