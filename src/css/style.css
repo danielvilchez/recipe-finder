@@ -12,18 +12,14 @@
 body {
     margin: 0;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    /* Tipografía principal */
     background-color: #F9F9F9;
-    /* Fondo según la documentación */
     color: #333333;
-    /* Texto según la documentación */
 }
 
 h1,
 h2,
 h3 {
     font-family: 'Poppins', sans-serif;
-    /* Tipografía para encabezados */
 }
 
 main {
@@ -32,11 +28,8 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    /* Espaciado uniforme entre columnas */
     max-width: 1200px;
-    /* Ancho general alineado */
     padding: 0 40px 30px 40px;
-    /* Padding superior en 0 para pegar el buscador al header */
 }
 
 
@@ -60,7 +53,6 @@ main {
     font-size: 2.2rem;
     font-weight: bold;
     color: #4CAF50;
-    /* Color primario verde */
 }
 
 .navigation {
@@ -81,13 +73,12 @@ main {
 
 
 /* =========================
-   Search Section (Full Width & Pegado al Header)
+   Search Section
 ========================= */
 
 .search-section {
     background-color: #e0e0e0;
     width: 100vw;
-    /* Fuerza a que ocupe todo el ancho de la ventana */
     position: relative;
     left: 50%;
     right: 50%;
@@ -99,12 +90,9 @@ main {
     box-sizing: border-box;
 }
 
-/* Alinea el contenido del buscador con las columnas de abajo */
 .search-section>* {
     max-width: 1200px;
-    /* Mismo ancho exacto que el <main> */
     padding: 0 40px;
-    /* Mismos márgenes laterales que las tarjetas */
     margin: 0 auto;
 }
 
@@ -143,7 +131,6 @@ button {
     border: 2px solid #222;
     border-radius: 5px;
     background-color: #4CAF50;
-    /* Color primario verde */
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -156,16 +143,14 @@ button:hover {
 
 
 /* =========================
-   Sections Layout (Alineación Ancha)
+   Sections Layout
 ========================= */
 
 .recipe-section,
 .news-section {
     padding: 0;
-    /* Eliminamos paddings excesivos que reducían el ancho */
     width: 100%;
     max-width: 100%;
-    /* Quitamos la restricción de 600px */
 }
 
 .recipe-section h2,
@@ -199,7 +184,6 @@ button:hover {
     min-height: 120px;
     background-color: #ffffff;
     width: 100%;
-    /* Ocupa el 100% de la columna izquierda */
 }
 
 .recipe-card img {
@@ -244,7 +228,6 @@ button:hover {
     min-height: 120px;
     background-color: #ffffff;
     width: 100%;
-    /* Ocupa el 100% de la columna derecha */
 }
 
 .news-card h3 {
@@ -256,10 +239,8 @@ button:hover {
     margin: 5px 0 15px;
 }
 
-/* Botón secundario para las noticias */
 .news-card button {
     background-color: #FF9800;
-    /* Color secundario naranja */
     align-self: flex-start;
 }
 
@@ -267,352 +248,11 @@ button:hover {
     background-color: #F57C00;
 }
 
-
-/* =========================
-   Footer
-========================= */
-
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #ffffff;
-    border-top: 2px solid #222;
-}
-
-
-/* =========================
-   Mobile Responsive
-========================= */
-
-@media screen and (max-width: 700px) {
-
-    .header {
-        padding: 20px;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    main {
-        display: block;
-        padding: 0 20px 20px 20px;
-    }
-
-    .search-section {
-        padding: 20px 0;
-    }
-
-    .recipe-section,
-    .news-section {
-        margin-bottom: 30px;
-    }
-
-    #searchForm {
-        flex-direction: column;
-    }
-
-    #searchInput {
-        width: 100%;
-    }
-
-    .recipe-card {
-        height: auto;
-        flex-direction: column;
-    }
-
-    .recipe-card img {
-        width: 100%;
-        height: 150px;
-        border-right: none;
-        border-bottom: 2px solid #222;
-    }
-}
-
-/* Import de tipografías desde la documentación */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap');
-
-/* =========================
-   General Styles
-========================= */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    /* Tipografía principal */
-    background-color: #F9F9F9;
-    /* Fondo según la documentación */
-    color: #333333;
-    /* Texto según la documentación */
-}
-
-h1,
-h2,
-h3 {
-    font-family: 'Poppins', sans-serif;
-    /* Tipografía para encabezados */
-}
-
-main {
-    width: 100%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    /* Espaciado uniforme entre columnas */
-    max-width: 1200px;
-    /* Ancho general alineado */
-    padding: 0 40px 30px 40px;
-    /* Padding superior en 0 para pegar el buscador al header */
-}
-
-
-/* =========================
-   Header
-========================= */
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 70px;
-    border-bottom: 2px solid #222;
-    background-color: #ffffff;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.logo h1 {
-    margin: 0;
-    font-size: 2.2rem;
-    font-weight: bold;
-    color: #4CAF50;
-    /* Color primario verde */
-}
-
-.navigation {
-    display: flex;
-    gap: 40px;
-}
-
-.navigation a {
-    text-decoration: none;
-    color: #333333;
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-.navigation a:hover {
-    color: #4CAF50;
-}
-
-
-/* =========================
-   Search Section (Full Width & Pegado al Header)
-========================= */
-
-.search-section {
-    background-color: #e0e0e0;
-    width: 100vw;
-    /* Fuerza a que ocupe todo el ancho de la ventana */
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    margin-top: 0;
-    grid-column: 1 / 3;
-    padding: 35px 0;
-    box-sizing: border-box;
-}
-
-/* Alinea el contenido del buscador con las columnas de abajo */
-.search-section>* {
-    max-width: 1200px;
-    /* Mismo ancho exacto que el <main> */
-    padding: 0 40px;
-    /* Mismos márgenes laterales que las tarjetas */
-    margin: 0 auto;
-}
-
-.search-section h2 {
-    margin: 0 0 15px;
-    font-size: 2rem;
-}
-
-.search-section p {
-    display: none;
-}
-
-#searchForm {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-#searchForm label {
-    display: none;
-}
-
-#searchInput {
-    flex: 1;
-    padding: 12px 20px;
-    font-size: 1.2rem;
-    border: 2px solid #222;
-    border-radius: 20px;
-    background-color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
-}
-
-button {
-    padding: 8px 25px;
-    font-size: 1rem;
-    border: 2px solid #222;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    /* Color primario verde */
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #388E3C;
-}
-
-
-/* =========================
-   Sections Layout (Alineación Ancha)
-========================= */
-
-.recipe-section,
-.news-section {
-    padding: 0;
-    /* Eliminamos paddings excesivos que reducían el ancho */
-    width: 100%;
-    max-width: 100%;
-    /* Quitamos la restricción de 600px */
-}
-
-.recipe-section h2,
-.news-section h2 {
-    font-size: 2rem;
-    border-bottom: 3px solid #222;
-    padding-bottom: 5px;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.footer {
-    grid-column: 1 / 3;
-}
-
-
-/* =========================
-   Recipe Cards
-========================= */
-
-.recipe-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.recipe-card {
-    display: flex;
-    border: 2px solid #222;
-    height: auto;
-    min-height: 120px;
-    background-color: #ffffff;
-    width: 100%;
-    /* Ocupa el 100% de la columna izquierda */
-}
-
-.recipe-card img {
-    width: 140px;
-    object-fit: cover;
-    border-right: 2px solid #222;
-}
-
-.recipe-card-content {
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.recipe-card h3 {
-    margin: 0 0 5px 0;
-    font-size: 1.2rem;
-}
-
-.recipe-card p {
-    margin: 2px 0;
-    font-size: 0.9rem;
-}
-
-
-/* =========================
-   News Cards
-========================= */
-
-.news-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.news-card {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #222;
-    padding: 15px;
-    min-height: 120px;
-    background-color: #ffffff;
-    width: 100%;
-    /* Ocupa el 100% de la columna derecha */
-}
-
-.news-card h3 {
-    margin: 0 0 10px;
-    font-size: 1.3rem;
-}
-
-.news-card p {
-    margin: 5px 0 15px;
-}
-
-/* Botón secundario para las noticias */
-.news-card button {
-    background-color: #FF9800;
-    /* Color secundario naranja */
-    align-self: flex-start;
-}
-
-.news-card button:hover {
-    background-color: #F57C00;
-}
-
-
-/* =========================
-   Footer
-========================= */
-
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #ffffff;
-    border-top: 2px solid #222;
-}
 
 /* =========================
    Favorites Page Styles
 ========================= */
 
-/* Sobrescribe el grid de 2 columnas de main solo en la página de favoritos */
 .favorites-main {
     display: block;
     max-width: 1200px;
@@ -627,7 +267,6 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Tarjeta vertical específica para Favoritos */
 .favorite-card {
     display: flex;
     flex-direction: column;
@@ -679,7 +318,6 @@ button:hover {
     background-color: #C62828;
 }
 
-/* Botón verde para View */
 .btn-primary-card {
     background-color: #4CAF50;
     color: #ffffff;
@@ -697,11 +335,11 @@ button:hover {
     background-color: #388E3C;
 }
 
+
 /* =========================
    Recipe Detail Fixes
 ========================= */
 
-/* Anula la regla global del <main> grid de 2 columnas */
 .recipe-detail-main {
     display: block !important;
     max-width: 1100px;
@@ -725,7 +363,6 @@ button:hover {
     padding-bottom: 10px;
 }
 
-/* Layout en 2 columnas: Foto a la izquierda, detalles a la derecha */
 .recipe-detail-top {
     display: grid;
     grid-template-columns: 350px 1fr;
@@ -780,11 +417,11 @@ button:hover {
     border-radius: 6px;
 }
 
+
 /* =========================
    Week 7: Animations & Spinner
 ========================= */
 
-/* Loader Spinner */
 .spinner {
     border: 4px solid #f3f3f3;
     border-top: 4px solid #4CAF50;
@@ -805,7 +442,6 @@ button:hover {
     }
 }
 
-/* Fade-in Animation for Cards */
 .recipe-card,
 .news-card,
 .recipe-detail-card {
@@ -824,15 +460,28 @@ button:hover {
     }
 }
 
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 2px solid #222;
+}
+
+
+/* =========================
+   Mobile Responsive
+========================= */
+
 @media screen and (max-width: 768px) {
     .recipe-detail-top {
         grid-template-columns: 1fr;
     }
 }
-
-/* =========================
-   Mobile Responsive
-========================= */
 
 @media screen and (max-width: 700px) {
 
